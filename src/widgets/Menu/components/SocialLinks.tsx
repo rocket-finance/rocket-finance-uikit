@@ -6,7 +6,7 @@ import Link from "../../../components/Link/Link";
 import * as IconModule from "../icons";
 import { socials } from "../config";
 
-const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
+const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 
 const SocialLinks: React.FC = () => (
   <Flex>
@@ -18,7 +18,14 @@ const SocialLinks: React.FC = () => (
         return (
           <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
             {social.items.map((item) => (
-              <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
+              <Link
+                to={item.href}
+                external
+                key={item.label}
+                href={item.href}
+                aria-label={item.label}
+                color="textSubtle"
+              >
                 {item.label}
               </Link>
             ))}
@@ -26,7 +33,7 @@ const SocialLinks: React.FC = () => (
         );
       }
       return (
-        <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
+        <Link to={social.href} external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
           <Icon {...iconProps} />
         </Link>
       );
