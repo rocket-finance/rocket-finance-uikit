@@ -111,7 +111,7 @@ export const links = [
       {
         label: "Github",
         href: "https://github.com/TapSwap/",
-        target: '_blank',
+        target: "_blank",
       },
       {
         label: "Docs",
