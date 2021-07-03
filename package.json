@@ -1,6 +1,6 @@
 {
   "name": "rocket-finance-uikit",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Dedicated uikit for spacex finance",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
